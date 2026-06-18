@@ -6,7 +6,7 @@
     <title>YULIYA SIMONCHIK — Senior Full Stack Developer</title>
     <meta
       name="description"
-      content="Senior Full Stack Developer with 5+ years of experience in Node.js, Angular, React, TypeScript, Python, AI agents and MCP."
+      content="Senior Full Stack Developer with 5+ years of experience in Node.js, Angular, React, TypeScript, AI agents and MCP."
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <link
@@ -519,35 +519,26 @@
       (function () {
         "use strict";
 
-        var skillData = [
-          // Row 1: Core Backend Stack
+        var skillData = [      
           { name: "Node.js", icon: "ph-hexagon", delay: "1" },
           { name: "NestJS", icon: "ph-cpu", delay: "1" },
           { name: "TypeScript", icon: "ph-file-code", delay: "1" },
 
-          // Row 2: AI & Intelligent Automation Systems
           { name: "OpenAI", icon: "ph-brain", delay: "2" },
-          { name: "MCP", icon: "ph-plug", delay: "2" },
-          { name: "Python", icon: "ph-terminal-window", delay: "2" },
-
-          // Row 3: Advanced Frontend Engineering
+          { name: "MCP", icon: "ph-plug", delay: "2" },       
+  
           { name: "Angular", icon: "ph-shield-star", delay: "3" },
           { name: "React", icon: "ph-atom", delay: "3" },
           { name: "REST API", icon: "ph-code", delay: "3" },
 
-          // Row 4: Data Infrastructure & Integration Systems
-          { name: "PostgreSQL", icon: "ph-database", delay: "4" },
-          { name: "RabbitMQ", icon: "ph-queue", delay: "4" },
-          { name: "Stripe", icon: "ph-currency-circle-dollar", delay: "4" },
+         { name: "PostgreSQL", icon: "ph-database", delay: "4" },
+          { name: "RabbitMQ", icon: "ph-queue", delay: "4" },   
 
-          // Row 5: DevOps & Version Control Cloud Infrastructure
           { name: "Docker", icon: "ph-cube", delay: "5" },
           { name: "AWS", icon: "ph-cloud", delay: "5" },
           { name: "Git", icon: "ph-git-branch", delay: "5" },
         ];
 
-        // ===== PROJECT DATA LAYER (UPWORK OPTIMIZED) =====
-        // ===== PROJECT DATA LAYER (NDA COMPLIANT) =====
         var projectData = [
           {
             tags: ["OpenAI", "MCP Servers", "CRM", "Redis"],
@@ -709,8 +700,7 @@
           // Generate project cards (must be before IntersectionObserver)
           renderProjects();
 
-          // Настройка анимаций появления при скролле
-          var animEls = document.querySelectorAll(".animate-in");
+        var animEls = document.querySelectorAll(".animate-in");
           if ("IntersectionObserver" in window) {
             var observer = new IntersectionObserver(
               function (entries) {
@@ -734,14 +724,12 @@
             });
           }
 
-          // Главный экран всегда виден без ожидания скролла
-          var heroEls = document.querySelectorAll("#hero .animate-in");
+         var heroEls = document.querySelectorAll("#hero .animate-in");
           heroEls.forEach(function (el) {
             el.style.animationPlayState = "running";
             el.style.opacity = "1";
           });
 
-          // ===== МОБИЛЬНОЕ МЕНЮ =====
           var menuToggle = document.getElementById("menu-toggle");
           var mobileMenu = document.getElementById("mobile-menu");
           if (menuToggle && mobileMenu) {
@@ -765,7 +753,7 @@
             }
           }
 
-          // ===== (TOAST) =====
+          // ===== TOAST =====
           var form = document.getElementById("contact-form");
           var toast = document.getElementById("toast");
           var toastMsg = document.getElementById("toast-message");
