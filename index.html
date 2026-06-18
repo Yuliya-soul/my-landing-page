@@ -1,0 +1,923 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YULIYA SIMONCHIK — Senior Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Senior Full Stack Developer with 5+ years of experience in Node.js, Angular, React, TypeScript, Python, AI agents and MCP."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { accent: "#a855f7", "accent-hover": "#c084fc" },
+            fontFamily: { body: ["Inter", "system-ui", "sans-serif"] },
+          },
+        },
+      };
+    </script>
+    <style>
+      :root {
+        --color-bg-primary: #0a0a0f;
+        --color-bg-secondary: #12121a;
+        --color-bg-card: #1a1a26;
+        --color-text-primary: #f1f5f9;
+        --color-text-secondary: #94a3b8;
+        --color-accent: #a855f7;
+        --color-accent-hover: #c084fc;
+        --color-border: #2a2a3a;
+        --font-body: "Inter", system-ui, sans-serif;
+        --section-padding: 5rem 1.5rem;
+        --card-radius: 1rem;
+        --transition-base: 300ms ease;
+        --transition-spring: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: var(--font-body);
+        background-color: var(--color-bg-primary);
+        color: var(--color-text-primary);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes glow {
+        0%,
+        100% {
+          box-shadow: 0 0 8px rgba(168, 85, 247, 0.4);
+        }
+        50% {
+          box-shadow: 0 0 24px rgba(168, 85, 247, 0.7);
+        }
+      }
+      @keyframes imgGlow {
+        0%,
+        100% {
+          box-shadow:
+            0 0 12px rgba(168, 85, 247, 0.3),
+            0 0 30px rgba(168, 85, 247, 0.1);
+        }
+        50% {
+          box-shadow:
+            0 0 24px rgba(168, 85, 247, 0.6),
+            0 0 50px rgba(168, 85, 247, 0.2);
+        }
+      }
+      .animate-in {
+        animation: fadeInUp 0.6s ease forwards;
+        opacity: 0;
+      }
+      .delay-1 {
+        animation-delay: 0.1s;
+      }
+      .delay-2 {
+        animation-delay: 0.2s;
+      }
+      .delay-3 {
+        animation-delay: 0.3s;
+      }
+      .delay-4 {
+        animation-delay: 0.4s;
+      }
+      .delay-5 {
+        animation-delay: 0.5s;
+      }
+      .delay-6 {
+        animation-delay: 0.6s;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--color-bg-primary);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--color-border);
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--color-accent);
+      }
+      ::selection {
+        background: rgba(168, 85, 247, 0.3);
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header
+      class="fixed top-0 left-0 right-0 z-50 backdrop-blur-lg"
+      style="
+        background: rgba(10, 10, 15, 0.85);
+        border-bottom: 1px solid var(--color-border);
+      "
+    >
+      <div
+        class="max-w-6xl mx-auto px-5 py-3 flex items-center justify-between"
+      >
+        <a href="#hero" class="flex items-center gap-3 group">
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="40" height="40" rx="10" fill="#1a1a26" />
+            <rect
+              x="1.5"
+              y="1.5"
+              width="37"
+              height="37"
+              rx="8.5"
+              stroke="url(#logoGrad)"
+              stroke-width="2"
+            />
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40">
+                <stop offset="0%" stop-color="#a855f7" />
+                <stop offset="100%" stop-color="#c084fc" />
+              </linearGradient>
+            </defs>
+            <text
+              x="50%"
+              y="55%"
+              dominant-baseline="middle"
+              text-anchor="middle"
+              fill="#a855f7"
+              font-family="Inter,sans-serif"
+              font-weight="700"
+              font-size="16"
+            >
+              YS
+            </text>
+          </svg>
+          <span
+            class="text-lg font-semibold tracking-tight hidden sm:inline text-[var(--color-text-primary)] group-hover:text-[var(--color-accent)] transition-colors"
+            style="transition-duration: var(--transition-base)"
+            >YULIYA SIMONCHIK</span
+          >
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a
+            href="#hero"
+            class="text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors"
+            style="transition-duration: var(--transition-base)"
+            >Hero</a
+          >
+          <a
+            href="#skills"
+            class="text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors"
+            style="transition-duration: var(--transition-base)"
+            >Skills</a
+          >
+          <a
+            href="#projects"
+            class="text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors"
+            style="transition-duration: var(--transition-base)"
+            >Projects</a
+          >
+          <a
+            href="#contact"
+            class="text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors"
+            style="transition-duration: var(--transition-base)"
+            >Contact</a
+          >
+        </nav>
+        <div class="flex items-center gap-4">
+          <a
+            href="#contact"
+            class="inline-block rounded-lg bg-accent px-5 py-2 text-sm font-semibold text-white transition-all hover:bg-accent-hover"
+            style="
+              transition-duration: var(--transition-base);
+              box-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
+            "
+            >Hire Me</a
+          >
+          <button
+            id="menu-toggle"
+            class="md:hidden flex items-center justify-center w-10 h-10 rounded-lg text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] hover:bg-[var(--color-bg-card)] transition-colors"
+            style="transition-duration: var(--transition-base)"
+            aria-label="Toggle navigation menu"
+          >
+            <i class="ph ph-list text-2xl"></i>
+          </button>
+        </div>
+      </div>
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden"
+        style="
+          border-top: 1px solid var(--color-border);
+          background: rgba(10, 10, 15, 0.95);
+          backdrop-filter: blur(12px);
+        "
+      >
+        <div class="max-w-6xl mx-auto px-5 py-4 flex flex-col gap-3">
+          <a
+            href="#hero"
+            class="mobile-link text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors py-2"
+            style="transition-duration: var(--transition-base)"
+            >Hero</a
+          >
+          <a
+            href="#skills"
+            class="mobile-link text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors py-2"
+            style="transition-duration: var(--transition-base)"
+            >Skills</a
+          >
+          <a
+            href="#projects"
+            class="mobile-link text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors py-2"
+            style="transition-duration: var(--transition-base)"
+            >Projects</a
+          >
+          <a
+            href="#contact"
+            class="mobile-link text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors py-2"
+            style="transition-duration: var(--transition-base)"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section
+      id="hero"
+      class="min-h-screen flex items-center justify-center px-5 relative overflow-hidden"
+      style="padding-top: 5rem; padding-bottom: 5rem"
+    >
+      <div class="absolute inset-0 pointer-events-none">
+        <div
+          class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full"
+          style="background: rgba(168, 85, 247, 0.05); filter: blur(120px)"
+        ></div>
+        <div
+          class="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full"
+          style="background: rgba(168, 85, 247, 0.03); filter: blur(100px)"
+        ></div>
+      </div>
+      <div class="max-w-3xl mx-auto text-center relative z-10">
+        <div class="animate-in delay-1 flex justify-center mb-8">
+          <img
+            src="photo.jpg"
+            alt="Yuliya Simonchik"
+            class="rounded-full w-40 h-40 object-cover"
+            style="
+              box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+              animation: imgGlow 2.5s ease-in-out infinite;
+            "
+          />
+        </div>
+        <h1
+          class="animate-in delay-2 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4"
+          style="
+            background: linear-gradient(135deg, #fff, var(--color-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          "
+        >
+          YULIYA SIMONCHIK
+        </h1>
+        <p
+          class="animate-in delay-3 text-lg sm:text-xl md:text-2xl font-medium text-[var(--color-accent)] mb-4"
+        >
+          Senior Full Stack Developer
+        </p>
+        <p
+          class="animate-in delay-4 text-base sm:text-lg text-[var(--color-text-secondary)] max-w-2xl mx-auto mb-10 leading-relaxed"
+        >
+          Building AI-powered solutions that drive revenue and automate business
+          processes
+        </p>
+        <div
+          class="animate-in delay-5 flex flex-col sm:flex-row items-center justify-center gap-4"
+        >
+          <a
+            href="#contact"
+            class="inline-block rounded-lg bg-accent px-8 py-3.5 text-base font-semibold text-white transition-all hover:bg-accent-hover"
+            style="animation: glow 2.5s ease-in-out infinite"
+            >Let's Work Together</a
+          >
+          <a
+            href="#projects"
+            class="inline-block rounded-lg border border-[var(--color-border)] px-8 py-3.5 text-base font-semibold text-[var(--color-text-primary)] transition-all hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
+            >View Projects</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <section id="skills" style="padding: var(--section-padding)" class="px-5">
+      <div class="max-w-6xl mx-auto">
+        <h2
+          class="animate-in delay-1 text-3xl sm:text-4xl font-bold text-center mb-14 text-[var(--color-text-primary)]"
+        >
+          Skills &amp; Technologies
+        </h2>
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"
+        ></div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section id="projects" style="padding: var(--section-padding)" class="px-5">
+      <div class="max-w-6xl mx-auto">
+        <h2
+          class="animate-in delay-1 text-3xl sm:text-4xl font-bold text-center mb-14 text-[var(--color-text-primary)]"
+        >
+          Featured Projects
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact" style="padding: var(--section-padding)" class="px-5">
+      <div class="max-w-2xl mx-auto">
+        <h2
+          class="animate-in delay-1 text-3xl sm:text-4xl font-bold text-center mb-4 text-[var(--color-text-primary)]"
+        >
+          Let's Build Something Amazing
+        </h2>
+        <p
+          class="animate-in delay-2 text-center text-[var(--color-text-secondary)] mb-12 max-w-lg mx-auto"
+        >
+          Have a project in mind? Fill out the form and I'll get back to you
+          within 24 hours.
+        </p>
+        <form
+          id="contact-form"
+          class="animate-in delay-3 space-y-6"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+        >
+          <input type="hidden" name="access_key" value="a6ad6cd3-1712-4b0f-adf1-2ba1c2afc002" />
+          <input
+            type="hidden"
+            name="subject"
+            value="New Proposal from Portfolio"
+          />
+                  <div class="relative">
+            <span
+              class="absolute left-4 top-1/2 -translate-y-1/2 text-[var(--color-text-secondary)] pointer-events-none"
+              ><i class="ph ph-user text-lg"></i
+            ></span>
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              required
+              minlength="2"
+              class="w-full rounded-xl bg-[var(--color-bg-card)] border border-[var(--color-border)] py-3.5 pl-12 pr-4 text-sm text-[var(--color-text-primary)] placeholder-[var(--color-text-secondary)] outline-none transition-all focus:border-[var(--color-accent)]"
+              style="transition-duration: var(--transition-base)"
+            />
+          </div>
+          <div class="relative">
+            <span
+              class="absolute left-4 top-1/2 -translate-y-1/2 text-[var(--color-text-secondary)] pointer-events-none"
+              ><i class="ph ph-envelope text-lg"></i
+            ></span>
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+              class="w-full rounded-xl bg-[var(--color-bg-card)] border border-[var(--color-border)] py-3.5 pl-12 pr-4 text-sm text-[var(--color-text-primary)] placeholder-[var(--color-text-secondary)] outline-none transition-all focus:border-[var(--color-accent)]"
+              style="transition-duration: var(--transition-base)"
+            />
+          </div>
+          <div class="relative">
+            <span
+              class="absolute left-4 top-4 text-[var(--color-text-secondary)] pointer-events-none"
+              ><i class="ph ph-pencil-line text-lg"></i
+            ></span>
+            <textarea
+              name="message"
+              placeholder="Describe your task..."
+              required
+              minlength="10"
+              rows="5"
+              class="w-full rounded-xl bg-[var(--color-bg-card)] border border-[var(--color-border)] py-3.5 pl-12 pr-4 text-sm text-[var(--color-text-primary)] placeholder-[var(--color-text-secondary)] outline-none resize-y min-h-[120px] transition-all focus:border-[var(--color-accent)]"
+              style="transition-duration: var(--transition-base)"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full rounded-xl bg-accent py-3.5 text-base font-semibold text-white transition-all hover:bg-accent-hover active:scale-[0.98]"
+            style="transition-duration: var(--transition-base)"
+          >
+            Send Proposal
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== TOAST NOTIFICATION ===== -->
+    <div
+      id="toast"
+      class="fixed bottom-6 right-6 z-50 hidden"
+      style="
+        transition:
+          transform 0.5s,
+          opacity 0.5s;
+        transform: translateY(16px);
+        opacity: 0;
+      "
+    >
+      <div
+        class="rounded-xl px-6 py-4 shadow-2xl border text-sm font-medium max-w-sm"
+        style="backdrop-filter: blur(12px)"
+      >
+        <div id="toast-content" class="flex items-center gap-3">
+          <i id="toast-icon" class="text-lg"></i>
+          <span id="toast-message"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer
+      style="border-top: 1px solid var(--color-border); padding: 2.5rem 1.5rem"
+      class="px-5"
+    >
+      <div
+        class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6"
+      >
+        <p
+          class="text-sm text-[var(--color-text-secondary)] text-center sm:text-left"
+        >
+          &copy; 2026 YULIYA SIMONCHIK. Built with
+          <span class="text-red-400">&hearts;</span>
+        </p>
+        <div class="flex items-center gap-5">
+          <a
+            href="https://github.com/Yuliya-soul"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            class="text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors"
+            style="transition-duration: var(--transition-base)"
+            ><i class="ph ph-github-logo text-2xl"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/yulya-simonchik/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            class="text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors"
+            style="transition-duration: var(--transition-base)"
+            ><i class="ph ph-linkedin-logo text-2xl"></i
+          ></a>
+          <a
+            href="mailto:simonchykyuliya@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Email"
+            class="text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors"
+            style="transition-duration: var(--transition-base)"
+            ><i class="ph ph-envelope text-2xl"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        "use strict";
+
+        var skillData = [
+          // Row 1: Core Backend Stack
+          { name: "Node.js", icon: "ph-hexagon", delay: "1" },
+          { name: "NestJS", icon: "ph-cpu", delay: "1" },
+          { name: "TypeScript", icon: "ph-file-code", delay: "1" },
+
+          // Row 2: AI & Intelligent Automation Systems
+          { name: "OpenAI", icon: "ph-brain", delay: "2" },
+          { name: "MCP", icon: "ph-plug", delay: "2" },
+          { name: "Python", icon: "ph-terminal-window", delay: "2" },
+
+          // Row 3: Advanced Frontend Engineering
+          { name: "Angular", icon: "ph-shield-star", delay: "3" },
+          { name: "React", icon: "ph-atom", delay: "3" },
+          { name: "REST API", icon: "ph-code", delay: "3" },
+
+          // Row 4: Data Infrastructure & Integration Systems
+          { name: "PostgreSQL", icon: "ph-database", delay: "4" },
+          { name: "RabbitMQ", icon: "ph-queue", delay: "4" },
+          { name: "Stripe", icon: "ph-currency-circle-dollar", delay: "4" },
+
+          // Row 5: DevOps & Version Control Cloud Infrastructure
+          { name: "Docker", icon: "ph-cube", delay: "5" },
+          { name: "AWS", icon: "ph-cloud", delay: "5" },
+          { name: "Git", icon: "ph-git-branch", delay: "5" },
+        ];
+
+        // ===== PROJECT DATA LAYER (UPWORK OPTIMIZED) =====
+        // ===== PROJECT DATA LAYER (NDA COMPLIANT) =====
+        var projectData = [
+          {
+            tags: ["OpenAI", "MCP Servers", "CRM", "Redis"],
+            title: "AI Automation & CRM Integration Engine",
+            description:
+              "Designed production backend architecture for autonomous AI lead qualification workflows. Integrated OpenAI API models and customized Model Context Protocol (MCP) servers to automate data management pipelines.",
+            delay: "1",
+          },
+          {
+            tags: ["Angular 13", "Google Maps API", "Storybook"],
+            title: "Enterprise Logistics & Fleet Management System",
+            description:
+              "Led the modular frontend migration of a high-traffic system from AngularJS to Angular 13. Engineered complex business logic setups, reusable Storybook UI components, and real-time geo-tracking maps.",
+            delay: "2",
+          },
+          {
+            tags: ["NestJS", "Stripe API", "RabbitMQ", "Microservices"],
+            title: "High-Load B2B Subscription & Billing Marketplace",
+            description:
+              "Architected a secure core backend framework using NestJS. Implemented multi-tier recurring transaction logic, automated Stripe workflows, and asynchronous RabbitMQ task queues to process high-volume events.",
+            delay: "3",
+          },
+          {
+            tags: ["Legacy Recovery", "Node.js", "Code Optimization"],
+            title: "Enterprise Legacy CRM System Modernization",
+            description:
+              "Rescued and stabilized a massive legacy codebase with zero system downtime. Reverse-engineered undocumented business logic, decoupled tightly bound modules, and significantly reduced core technical debt.",
+            delay: "1",
+          },
+          {
+            tags: ["Angular", "NgRx State", "Micro-Frontends"],
+            title: "High-Volume Human Capital Analytics Dashboard",
+            description:
+              "Built a responsive micro-frontend grid engine for complex operational metrics. Designed high-performance data tables featuring custom multi-parameter filters, infinite scroll, and isolated NgRx state modules.",
+            delay: "2",
+          },
+          {
+            tags: ["HealthTech", "FHIR", "Medplum", "Auth0"],
+            title: "Interoperable Clinical Measurement & Compliance App",
+            description:
+              "Developed an interoperable healthcare tracking suite based on self-hosted Medplum servers and FHIR data specifications. Integrated strict Auth0 identity protocols and automated secure deployment structures.",
+            delay: "3",
+          },
+          {
+            tags: ["AI Vision", "HTML5 Canvas", "WebSockets", "SVG"],
+            title: "Real-Time AI-Assisted Medical Diagnostic Interface",
+            description:
+              "Engineered high-performance frontend visual layers for automated digital diagnostics. Built custom interactive Canvas/SVG image annotation tools linked with real-time video processing systems via WebSockets.",
+            delay: "1",
+          },
+          {
+            tags: ["FinTech", "Canvas API", "Ajv Validation", "JSON Schema"],
+            title: "Real-Time Asset Trading Analytical Dashboard",
+            description:
+              "Constructed low-latency analytical charts and active trading floor monitors. Implemented strict real-time data payload filtering and validation layers utilizing fast Ajv schema parsing engines.",
+            delay: "2",
+          },
+        ];
+
+        function renderSkills() {
+          var grid =
+            document.querySelector("#skills .grid") ||
+            document.getElementById("skills-container");
+          if (!grid) {
+            console.warn("Skills grid container not found");
+            return;
+          }
+          // Completely clear the container before adding new elements
+          grid.textContent = "";
+
+          for (var i = 0; i < skillData.length; i++) {
+            var s = skillData[i];
+
+            // 1. Create the card layout element
+            var card = document.createElement("div");
+            card.className =
+              "skill-card animate-in delay-" +
+              s.delay +
+              " flex flex-col items-center gap-3 p-5 rounded-xl bg-[var(--color-bg-card)] border border-[var(--color-border)] transition-all duration-300 hover:border-[var(--color-accent)] hover:scale-105 hover:shadow-[0_0_20px_rgba(168,85,247,0.15)] cursor-default";
+
+            // 2. Create the icon asset element
+            var iconElement = document.createElement("i");
+            iconElement.className =
+              "ph " + s.icon + " text-3xl text-[var(--color-accent)]";
+
+            // 3. Create the title text element
+            var nameElement = document.createElement("span");
+            nameElement.className =
+              "text-sm font-medium text-[var(--color-text-primary)]";
+            nameElement.textContent = s.name; // Mitigates false virus triggers from antimalware scanners
+
+            // Append all created sub-elements into the card layout
+            card.appendChild(iconElement);
+            card.appendChild(nameElement);
+            grid.appendChild(card);
+          }
+        }
+
+        // ===== SAFE PROJECT CARD GENERATION =====
+        function renderProjects() {
+          var grid = document.querySelector("#projects .grid");
+          if (!grid) {
+            console.warn("Projects grid container not found");
+            return;
+          }
+
+          // Clear container before adding new items
+          grid.textContent = "";
+
+          for (var i = 0; i < projectData.length; i++) {
+            var p = projectData[i];
+
+            // 1. Create card wrapper
+            var card = document.createElement("div");
+            card.className =
+              "project-card animate-in delay-" +
+              p.delay +
+              " rounded-xl bg-[var(--color-bg-card)] border border-[var(--color-border)] p-6 flex flex-col transition-all duration-300 hover:border-[var(--color-accent)] hover:shadow-[0_0_25px_rgba(168,85,247,0.12)] hover:-translate-y-1";
+
+            // 2. Create tags container
+            var tagsContainer = document.createElement("div");
+            tagsContainer.className = "flex items-center gap-2 mb-4 flex-wrap";
+
+            for (var j = 0; j < p.tags.length; j++) {
+              var tag = document.createElement("span");
+              tag.className = "px-3 py-1 rounded-full text-xs font-medium";
+              tag.style.background = "rgba(168, 85, 247, 0.1)";
+              tag.style.color = "var(--color-accent)";
+              tag.style.border = "1px solid rgba(168, 85, 247, 0.2)";
+              tag.textContent = p.tags[j];
+              tagsContainer.appendChild(tag);
+            }
+            card.appendChild(tagsContainer);
+
+            // 3. Create title
+            var titleEl = document.createElement("h3");
+            titleEl.className =
+              "text-lg font-semibold mb-2 text-[var(--color-text-primary)]";
+            titleEl.textContent = p.title;
+            card.appendChild(titleEl);
+
+            // 4. Create description
+            var descEl = document.createElement("p");
+            descEl.className =
+              "text-sm text-[var(--color-text-secondary)] leading-relaxed mb-6 flex-1";
+            descEl.textContent = p.description;
+            card.appendChild(descEl);
+
+            // 6. Append card to grid
+            grid.appendChild(card);
+          }
+        }
+
+        // ===== DOM CONTENT LOADED =====
+        document.addEventListener("DOMContentLoaded", function () {
+          // Сначала безопасно создаем карточки
+          renderSkills();
+
+          // Generate project cards (must be before IntersectionObserver)
+          renderProjects();
+
+          // Настройка анимаций появления при скролле
+          var animEls = document.querySelectorAll(".animate-in");
+          if ("IntersectionObserver" in window) {
+            var observer = new IntersectionObserver(
+              function (entries) {
+                entries.forEach(function (entry) {
+                  if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = "running";
+                    observer.unobserve(entry.target);
+                  }
+                });
+              },
+              { threshold: 0.15, rootMargin: "0px 0px -50px 0px" },
+            );
+            animEls.forEach(function (el) {
+              el.style.animationPlayState = "paused";
+              el.style.opacity = "0";
+              observer.observe(el);
+            });
+          } else {
+            animEls.forEach(function (el) {
+              el.style.animationPlayState = "running";
+            });
+          }
+
+          // Главный экран всегда виден без ожидания скролла
+          var heroEls = document.querySelectorAll("#hero .animate-in");
+          heroEls.forEach(function (el) {
+            el.style.animationPlayState = "running";
+            el.style.opacity = "1";
+          });
+
+          // ===== МОБИЛЬНОЕ МЕНЮ =====
+          var menuToggle = document.getElementById("menu-toggle");
+          var mobileMenu = document.getElementById("mobile-menu");
+          if (menuToggle && mobileMenu) {
+            menuToggle.addEventListener("click", function () {
+              mobileMenu.classList.toggle("hidden");
+              var icon = menuToggle.querySelector(".ph");
+              if (icon) {
+                icon.className = mobileMenu.classList.contains("hidden")
+                  ? "ph ph-list text-2xl"
+                  : "ph ph-x text-2xl";
+              }
+            });
+
+            var mobileLinks = document.querySelectorAll(".mobile-link");
+            for (var j = 0; j < mobileLinks.length; j++) {
+              mobileLinks[j].addEventListener("click", function () {
+                mobileMenu.classList.add("hidden");
+                var icon = menuToggle.querySelector(".ph");
+                if (icon) icon.className = "ph ph-list text-2xl";
+              });
+            }
+          }
+
+          // ===== (TOAST) =====
+          var form = document.getElementById("contact-form");
+          var toast = document.getElementById("toast");
+          var toastMsg = document.getElementById("toast-message");
+          var toastIcon = document.getElementById("toast-icon");
+
+          function showToast(message, isSuccess) {
+            if (!toast || !toastMsg || !toastIcon) return;
+            toastMsg.textContent = message;
+            toastIcon.className = isSuccess
+              ? "ph ph-check-circle text-lg text-green-400"
+              : "ph ph-x-circle text-lg text-red-400";
+            toast.style.backgroundColor = isSuccess
+              ? "rgba(20,40,20,0.95)"
+              : "rgba(40,20,20,0.95)";
+            toast.style.border = isSuccess
+              ? "1px solid rgba(74,222,128,0.3)"
+              : "1px solid rgba(248,113,113,0.3)";
+            toast.style.color = "#f1f5f9";
+
+            requestAnimationFrame(function () {
+              toast.classList.remove("hidden");
+              requestAnimationFrame(function () {
+                toast.style.transform = "translateY(0)";
+                toast.style.opacity = "1";
+              });
+            });
+
+            setTimeout(function () {
+              toast.style.transform = "translateY(16px)";
+              toast.style.opacity = "0";
+              setTimeout(function () {
+                toast.classList.add("hidden");
+              }, 500);
+            }, 4000);
+          }
+          // ===== CONTACT FORM AJAX HANDLING WITH WEB3FORMS =====
+          if (form) {
+            form.addEventListener("submit", function (e) {
+              e.preventDefault();
+
+              var nameField = form.querySelector('input[name="name"]');
+              var emailField = form.querySelector('input[name="email"]');
+              var msgField = form.querySelector('textarea[name="message"]');
+
+              // Field Validation: Verify name has a minimum of 2 characters
+              if (!nameField.value || nameField.value.trim().length < 2) {
+                showToast(
+                  "Please enter your name (at least 2 characters).",
+                  false,
+                );
+                nameField.focus();
+                return;
+              }
+
+              // Field Validation: Run structured email syntax regex parsing
+              if (
+                !emailField.value ||
+                !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value)
+              ) {
+                showToast("Please enter a valid email address.", false);
+                emailField.focus();
+                return;
+              }
+
+              // Field Validation: Verify text body description length constraint
+              if (!msgField.value || msgField.value.trim().length < 10) {
+                showToast(
+                  "Please describe your task (at least 10 characters).",
+                  false,
+                );
+                msgField.focus();
+                return;
+              }
+
+              // Access Token Check: Read from the hidden form field
+              var accessKeyField = form.querySelector(
+                'input[name="access_key"]',
+              );
+              var runtimeAccessKey = accessKeyField
+                ? accessKeyField.value.trim()
+                : "";
+              if (!runtimeAccessKey) {
+                showToast(
+                  "Web3Forms access key is missing. Set it in the hidden input.",
+                  false,
+                );
+                return;
+              }
+
+              var submitBtn = form.querySelector('button[type="submit"]');
+              if (submitBtn) {
+                var originalText = submitBtn.textContent;
+                submitBtn.disabled = true;
+                submitBtn.textContent = "Sending...";
+
+                // Assemble form payload for Web3Forms API
+                var subjectField = form.querySelector(
+                  'input[name="subject"]',
+                );
+                var formData = {
+                  access_key: runtimeAccessKey,
+                  subject: subjectField
+                    ? subjectField.value.trim()
+                    : "New Proposal from Portfolio",
+                  name: nameField.value.trim(),
+                  email: emailField.value.trim(),
+                  message: msgField.value.trim(),
+                };
+
+                // Dispatch real live HTTP POST request wire network pipeline
+                fetch("https://api.web3forms.com/submit", {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                  },
+                  body: JSON.stringify(formData),
+                })
+                  .then(function (response) {
+                    return response.json();
+                  })
+                  .then(function (data) {
+                    if (data.success) {
+                      showToast("Message sent successfully!", true);
+                      form.reset();
+                    } else {
+                      showToast(
+                        data.message || "Submission failed. Please try again.",
+                        false,
+                      );
+                    }
+                  })
+                  .catch(function (error) {
+                    console.error(
+                      "Web3Forms endpoint communication error:",
+                      error,
+                    );
+                    showToast(
+                      "Network pipeline failure. Please check your connection.",
+                      false,
+                    );
+                  })
+                  .finally(function () {
+                    // Re-enable actionable submit button interfaces safely
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalText;
+                  });
+              }
+            });
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
